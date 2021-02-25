@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bill Split</title>
+	<style type="text/css">
+
+		body
+			{
+				background-color: #00ffbf;
+			}
+		*
+			{
+				text-align: center;
+			}
+		pre
+			{
+				font-size: 20px;
+			}
+		#d1
+			{
+				padding: 40px;
+				margin: 100px;
+			}
+	</style>
+	<script type="text/javascript">
+		function split()
+		{	
+            var a = document.getElementById("bill").value;
+            var b = document.getElementById("members").value;
+			var result = (a/b);
+			document.getElementById("total").innerHTML = result + " Rs";
+		}
+	</script>
+</head>
+
+<body>
+	<h1>Week 1 | Day 4</h1>
+	<pre>
+	Hey! Everyone,
+	You can use me to <em>Split</em> your bill. 
+	</pre>	
+	<div id="d1" style="background-color: #ff0000;">
+
+		<table>
+            <tr>
+                <th>Bill Amount (Rs.)</th>
+                <td><input type="number" id ="bill" name="x" value='' placeholder="Enter here"></td> 
+            </tr>
+            <tr>
+                <th>No. of members</th>
+                <td><input type="number" id ="members" name="y" value='' placeholder="Enter here"></td>
+            </tr>
+        </table>
+		<div>
+			<button onclick="split()">Bill</button>
+		</div>
+		<h3 id="total"></h3>
+	</div>
+</body>
+</html>
